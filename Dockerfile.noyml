@@ -1,0 +1,5 @@
+FROM conda/miniconda3-centos7
+RUN conda init bash &&\
+    conda create -n myenv wget &&\
+    echo "conda activate myenv" >> ~/.bashrc
+

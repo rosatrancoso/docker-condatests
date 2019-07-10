@@ -1,0 +1,7 @@
+FROM conda/miniconda3-centos7
+ADD environment.yml /tmp/environment.yml
+RUN conda init bash &&\
+    conda env create -f /tmp/environment.yml &&\
+    echo "conda activate myenv" >> ~/.bashrc
+
+
